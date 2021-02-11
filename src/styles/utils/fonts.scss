@@ -11,74 +11,26 @@
   }
   @font-face {
     font-family: Lato;
-    src: local(Lato-LightItalic),
-      url(../../fonts/Lato/Lato-LightItalic.woff2) format("woff2"),
-      url(../../fonts/Lato/Lato-LightItalic.woff) format("woff"),
-      url(../../fonts/Lato/Lato-LightItalic.ttf) format("truetype");
-    font-weight: 300;
-    font-style: italic;
-    font-stretch: normal;
-  }
-  @font-face {
-    font-family: Lato;
-    src: local(Lato-Light),
-      url(/path/to/Lato-Light.woff2) format("woff2"),
-      url(/path/to/Lato-Light.woff) format("woff"),
-      url(/path/to/Lato-Light.ttf) format("truetype");
-    font-weight: 300;
+    src: local(Lato-Regular),
+      url(../../fonts/Lato/Lato-Regular.woff2) format("woff2"),
+      url(../../fonts/Lato/Lato-Regular.woff) format("woff"),
+      url(../../fonts/Lato/Lato-Regular.ttf) format("truetype");
+    font-weight: normal;
     font-style: normal;
     font-stretch: normal;
   }
-  @font-face {
-    font-family: Lato;
-    src: local(Lato-Bold),
-      url(../../fonts/Lato/Lato-Bold.woff2) format("woff2"),
-      url(../../fonts/Lato/Lato-Bold.woff) format("woff"),
-      url(../../fonts/Lato/Lato-Bold.ttf) format("truetype");
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-  }
-  @font-face {
-    font-family: Lato;
-    src: local(Lato-Black),
-      url(../../fonts/Lato/Lato-Black.woff2) format("woff2"),
-      url(../../fonts/Lato/Lato-Black.woff) format("woff"),
-      url(../../fonts/Lato/Lato-Black.ttf) format("truetype");
-    font-weight: 900;
-    font-style: normal;
-    font-stretch: normal;
-  }
+ 
   @font-face {
     font-family: Raleway;
-    src: local(Raleway-Bold),
-      url(../../fonts/Raleway/Raleway-Bold.woff2) format("woff2"),
-      url(../../fonts/Raleway/Raleway-Bold.woff) format("woff"),
-      url(../../fonts/Raleway/Raleway-Bold.ttf) format("truetype");
-    font-weight: bold;
+    src: local(Raleway-Regular),
+      url(../../fonts/Raleway/Raleway-Regular.woff2) format("woff2"),
+      url(../../fonts/Raleway/Raleway-Regular.woff) format("woff"),
+      url(../../fonts/Raleway/Raleway-Regular.ttf) format("truetype");
+    font-weight:normal;
     font-style: normal;
     font-stretch: normal;
   }
-  @font-face {
-    font-family: Raleway;
-    src: local(Raleway-ExtraBold),
-      url(../../fonts/Raleway/Raleway-ExtraBold.woff2) format("woff2"),
-      url(../../fonts/Raleway/Raleway-ExtraBold.woff) format("woff"),
-      url(../../fonts/Raleway/Raleway-ExtraBold.ttf) format("truetype");
-    font-weight: 800;
-    font-style: normal;
-    font-stretch: normal;
-  }
-  @font-face {
-    font-family: Raleway;
-    src: local(Raleway-Heavy),
-      url(../../fonts/Raleway/Raleway-Heavy.woff2) format("woff2"),
-      url(../../fonts/Raleway/Raleway-Heavy.woff) format("woff"),
-      url(../../fonts/Raleway/Raleway-Heavy.ttf) format("truetype");
-    font-weight: 900;
-    font-style: normal;
-    font-stretch: normal;
-  }
+ 
   @mixin Text-Style-8 {
     font-family: Lato;
     font-size: 72px;
@@ -92,7 +44,7 @@
     font-family: Raleway;
     font-size: 72px;
     font-weight: 900;
-    line-height: 0.49;
+    //line-height: 0.49;
     text-align: left;
     color: $charcoal-grey;
   }

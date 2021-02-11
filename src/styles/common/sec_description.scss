@@ -1,0 +1,29 @@
+@import "../mixins/media";
+@import "../utils/variables.scss";
+@import "../utils/fonts.scss";
+
+.description{
+    max-width: 1500px;
+    background-image: linear-gradient(to top, $dark, $dark-two);
+    .description__container{
+
+    }
+    .description__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .description__content-item{
+        list-style: none;
+        padding:117px 0;
+        margin: 0;
+        li:first-of-type{
+            @include Text-Style-8;
+            border-left: 5px solid $water-blue;
+            border-radius: 2px;
+        }
+      
+    }
+}
+   
+       
+            

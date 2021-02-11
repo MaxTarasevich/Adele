@@ -1,0 +1,62 @@
+@import "../mixins/media";
+@import "../utils/variables.scss";
+@import "../utils/fonts.scss";
+
+.orderNow{
+    max-width: 1500px;
+    background: url(../../img/dotten_bg.png) no-repeat 0% 52%,$pale-grey;
+    
+  
+}
+.orderNow__container{
+display: flex;
+justify-content: center;
+padding-top: 180px;
+padding-bottom: 172px;
+
+.orderNow__text{
+   max-width: 450px;
+    margin-top: 113px;
+   
+    .orderNow__text-title{
+        border-left: 5px solid $water-blue;
+        padding-left: 30px;
+    }
+    h1{
+        @include Text-Style-2;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+    h2{
+        @include Text-Style-3;
+    }
+    p{
+        @include Text-Style-4;
+    }
+    .orderNow__text-button-group{
+        button{
+            @include Text-Style-6;
+            border:none;
+            background-color: $water-blue;
+            padding: 20px 38px;
+            border-radius: 35px;
+            cursor: pointer;
+        }
+        button+button{
+            @include Text-Style-5;
+            border:none;
+            background-color:none;
+            text-transform: uppercase;
+        }
+        button+button::after{
+            content: url(../../img/video_icon.png);
+            width: 18px;
+            height: 18px;
+          position: relative;
+          top:3px;
+          left: 9px;
+           
+        }
+    }
+}
+}
