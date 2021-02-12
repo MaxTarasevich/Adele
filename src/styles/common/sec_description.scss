@@ -1,14 +1,28 @@
-@import "../mixins/media";
-@import "../utils/variables.scss";
-@import "../utils/fonts.scss";
+
 
 .description{
     max-width: 1500px;
     background-image: linear-gradient(to top, $dark, $dark-two);
     
+    .description__container{
+        display: flex;
+    }
+    .description__image {
+        position: relative;
+        width: 25%;
+       img{
+           position: absolute;
+           width: 404px;
+           height: 525px;
+           bottom:-60px;
+           right: 50px;
+       }
+    }
     .description__content{
         display: flex;
-        justify-content: space-between;
+        width: 75%;
+        justify-content: space-around;
+       
     }
     .description__content-item{
         list-style: none;
@@ -16,8 +30,32 @@
         margin: 0;
         li:first-of-type{
             @include Text-Style-8;
+            padding-left: 22px;
             border-left: 5px solid $water-blue;
             border-radius: 2px;
+            margin-bottom: 25px;
+        }
+        li{
+            font-family: Lato;
+            font-size: 16px;
+            font-stretch: normal;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 1.38;
+           color: $water-blue;
+            letter-spacing: 0.4px;
+            text-align: left;
+           margin-bottom: 10px;
+        }
+        li:last-of-type{
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: 0.4px;
+            text-align: left;
+            color: $greyish;
+           
         }
       
     }
