@@ -3,25 +3,23 @@
     .fetures__container{
      display: grid;
      justify-content: space-around;
-     grid-template-columns:minmax(auto,255px) minmax(auto,310px) minmax(auto,255px);
+     grid-template-columns:minmax(auto,255px) minmax(auto,340px) minmax(auto,255px);
      padding-top: 110px;
        
         .fetures__title {
             grid-column-start: 2;
-         display: flex;
+        /* display: flex;
          flex-wrap: wrap;
-         max-width: 333px;
          justify-content: center;
          align-items: center;
-        
-         
+         margin-bottom: 73px;
             h2{
                 margin: 0;
                 padding: 0;
                 @include Text-Style-7;
                 border-right: 1px solid $water-blue;
                 padding-right: 10px;
-              
+                text-transform: uppercase;
             }
             p{
                 margin-top: 16px;
@@ -36,7 +34,8 @@
                 font-size: 30px;
                 font-weight: 300;
                 color: $charcoal-grey;
-            }
+                text-transform: uppercase;
+            }*/
            
         }
 
@@ -51,6 +50,7 @@
                 li:first-of-type{
                    border-right: 5px solid $water-blue;
                    padding-right: 15px;
+                   margin-top: 63px;
                     }
             }
         }
@@ -61,17 +61,20 @@
                 li:first-of-type{
                     border-left: 5px solid $water-blue;
                     padding-left: 15px;
+                    margin-top: 63px;
                      }
             }
         }
         .fetures__contant-list {
             list-style: none;
             padding: 0;
+            margin-bottom: 80px;
 
             li:first-of-type{
             @include Text-Style-11;
             text-transform: uppercase;
             margin-bottom: 15px;
+            padding-bottom: 15px;
 
             }
 

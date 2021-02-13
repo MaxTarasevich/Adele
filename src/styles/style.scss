@@ -1,17 +1,25 @@
 @import "../../node_modules/normalize.css/normalize.css";
 
 @import "mixins/media";
-@import "utils/variables.scss";
-@import "utils/fonts.scss";
+
+@import "utils/variables";
+
+@import "utils/fonts";
 
 @import "common/global";
 
 @import "common/header";
 
-@import "common/section-do_it.scss";
+@import "common/section-do_it";
 
-@import "common/sec_description.scss";
+@import "common/sec_description";
 
-@import "common/sec_fetures.scss";
+@import "common/sec_fetures";
+
+@import "common/sec_real-rezults";
+
+@import "common/sec_testimonials";
+
+@import "common/sec_facts";
 
 @import "common/footer";

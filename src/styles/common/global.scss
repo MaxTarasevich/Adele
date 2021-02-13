@@ -23,12 +23,37 @@ a {
     max-width: 1170px;
     margin: 0 auto;
 }
-header {
+header, section, footer {
+    max-width: 1500px;
     margin: 0 auto;
 }
-section{
-    margin: 0 auto;
-}
-footer{
-    margin: 0 auto;
+.section__title{
+     display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         margin-bottom: 73px;
+            h2{
+                margin: 0;
+                padding: 0;
+                @include Text-Style-7;
+                border-right: 1px solid $water-blue;
+                padding-right: 10px;
+                text-transform: uppercase;
+            }
+            p{
+                margin-top: 16px;
+                @include Text-Style-10;
+                
+            }
+            h2+p{
+                margin: 0;
+                padding: 0;
+                padding-left: 10px;
+                font-family: Raleway;
+                font-size: 30px;
+                font-weight: 300;
+                color: $charcoal-grey;
+                text-transform: uppercase;
+            }
 }

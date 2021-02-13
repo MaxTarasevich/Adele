@@ -1,0 +1,28 @@
+.testimonials{
+    background: url(../../img/testimonias_bg.png);
+    padding: 110px 0;
+    .testimonials__container{
+
+        .testimonials__title{
+            max-width: 400px;
+            margin: 0 auto;
+            h2{
+                font-weight: 800;
+                color: $white-three;
+            }
+            p{
+                @include Text-Style-14;
+            }
+            h2+p{
+                @include Text-Style-13;
+
+            }
+          
+        }
+        .testimonials__slider {
+            @include Text-Style-15;
+        }
+    }
+}
+   
+        

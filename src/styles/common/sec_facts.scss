@@ -1,0 +1,78 @@
+.facts{
+    background-color: $pale-grey;
+    padding: 110px 0;
+    .facts__container{
+        .facts__title{
+            max-width: 340px;
+            margin: 0 auto;
+        }
+        .facts__list{
+            max-width: 460px;
+            list-style: none;
+            padding: 0;
+            margin-top: 75px;
+            cursor: pointer;
+
+            li{
+                @include Text-Style-17;
+                border-bottom: 1px solid $white-four;
+                padding: 5px;
+                span{
+                  float: right;
+                }
+            }
+            li:hover{
+                transition: 0.4s ease-in;
+                transform: scaleY(1.2);
+                transform: scaleX(1.02);
+                box-shadow: 0px 3px 9px 0 rgba(0, 0, 0, 0.24);
+                 border: solid 1px #d7d7d7;
+                background-color: $white;
+            }
+            li:first-of-type{
+                font-family: Lato;
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 0.92;
+                letter-spacing: 0.6px;
+                text-align: left;
+                color: $charcoal-grey;
+                text-transform: uppercase;
+                padding-bottom: 30px;
+                border-bottom: 5px solid $charcoal-grey;
+                margin-bottom: 30px;
+                span+span{
+                    display: inline-block;
+                    padding-top: 5px;
+                    clear: both;
+                    @include Text-Style-17;
+                 
+                }
+            }
+            li:first-of-type:hover{
+                transition: 0.4s ease-in;
+                transform: scale(1);
+                box-shadow:none;
+                 border:none;
+                 border-bottom: 5px solid $charcoal-grey;
+                background-color: $white;
+            }
+            
+        }
+
+        .facts__description{
+            max-width: 360px;
+            .facts__description-image{
+
+            }
+            .facts__description-title{
+
+            }
+            .facts__description-text{
+
+            }
+        }
+    }
+}
+    
+         
