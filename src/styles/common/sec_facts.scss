@@ -6,11 +6,17 @@
             max-width: 340px;
             margin: 0 auto;
         }
+        .facts__content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 75px;
         .facts__list{
+            
             max-width: 460px;
             list-style: none;
             padding: 0;
-            margin-top: 75px;
+           
             cursor: pointer;
 
             li{
@@ -61,17 +67,47 @@
         }
 
         .facts__description{
+            margin-left: 120px;
             max-width: 360px;
             .facts__description-image{
-
+                width: 100px;
+                height: 115px;
+               clip-path:  polygon(50% 0%, 50% 0%, 100% 25%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                
             }
             .facts__description-title{
-
+                border-left: 5px solid $water-blue;
+                padding-left: 16px;
+                h2{
+                    @include Text-Style-12;
+                    text-transform: uppercase;
+                }
+                p{
+                    font-family: Lato;
+                    font-size: 16px;
+                    font-weight: 300;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 0.5;
+                    letter-spacing: 0.4px;
+                    text-align: left;
+                    color: $charcoal-grey;
+                }
             }
             .facts__description-text{
-
+                margin-top: 40px;
+                font-family: Lato;
+                font-size: 16px;
+                font-weight: 300;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.4px;
+                text-align: left;
+                color: $charcoal-grey;
             }
         }
+    }
     }
 }
     

@@ -1,0 +1,28 @@
+.certifications{
+    background-color: $pale-grey-two;
+    padding: 80px 0;
+    .certifications__title{
+        max-width: 250px;
+        margin: 0 auto;
+        h2{
+            @include Text-Style-7;
+        }
+        p{
+            @include Text-Style-10;
+        }
+    }
+    .certifications__content{
+        max-width: 950px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .certifications__content-icon{
+        max-width: 190px;
+        background-color: $pale-grey-two;
+        padding: 20px ;
+    }
+}
