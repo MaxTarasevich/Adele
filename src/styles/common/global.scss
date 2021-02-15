@@ -5,7 +5,10 @@
 *::after {
     box-sizing: inherit;
 }
-
+*:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
 html {
     box-sizing: border-box;
 }
