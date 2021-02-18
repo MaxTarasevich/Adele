@@ -1,5 +1,5 @@
 .issue{
-    padding: 100px 0;
+    padding: 100px 0 120px;
     .issue__title{
         max-width: 400px;
         margin: 0 auto;
@@ -13,6 +13,48 @@
         }
         h2+p{
            padding: 10px;
+        }
+    }
+    .issue__form{
+        display: flex;
+        max-width: 570px;
+        padding: 10px;
+       flex-wrap: wrap;
+       justify-content: space-between;
+        margin: 0 auto;
+
+        input,textarea{
+            border: none;
+            padding:15px 5px;
+            @include Text-Style-21;
+        }
+        input{
+            width: 260px;
+            border-bottom: 1px solid $white-four;
+        }
+        .issue__subject{
+            padding: 12px 6px;
+            margin-top: 40px;
+            @include Text-Style-21;
+        }
+        .issue__textarea{
+            width: 556px;
+            resize: none;
+            height: 140px;
+            border-top: 1px solid $white-four;
+            border-bottom: 1px solid $white-four;
+            margin-bottom: 50px;
+        }
+        .issue__submit{
+            width: 226px;
+            padding: 13px 10px;
+            margin: 0 auto;
+            background-color: $water-blue;
+           
+            @include Text-Style-6;
+            text-align: center;
+            border:none;
+            border-radius: 20px;
         }
     }
 }

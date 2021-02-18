@@ -62,7 +62,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "jquery": "^3.5.0",
     "normalize.css": "^8.0.1"
   },
   "editorconfig-cli": [

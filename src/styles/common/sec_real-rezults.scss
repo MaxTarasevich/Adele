@@ -1,4 +1,5 @@
 
+
 .rezults{
     background-color: $white;
     padding: 120px 0 120px;
@@ -9,8 +10,87 @@
             max-width: 420px;
             margin: 0 auto 78px;
         }
-       
-    }
-}
+        .rezults__slider{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .rezults__slider-prevArrow, .rezults__slider-nextArrow{
+                cursor: pointer;
+            }
+            .rezults__slider-prevArrow:hover, .rezults__slider-nextArrow:hover{
+                transition: 0.2s ease-in;
+                transform: scale(1.1);
+            }
+            
+            }
+            .result__slider-display{
+                width: 900px;
+                height: 400px;
+                display: flex;
+                overflow: hidden;
+            }
 
+            .rezults__slider-item{
+                min-width:900px;
+                display: flex;
+                position: relative;
+                left:-900px;
+                justify-content:end;
+
+                .slider__img-before{
+                    
+                    position: absolute;
+                    top:50px;
+                    left: 100px;
+                    img{
+                        width: 260px;
+                    }
+                }
+                .slider__img-after{
+                    img{width: 360px;}
+                }
+                .rezults__slider-text{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    align-content: center;
+                    width: 200px;
+                    margin-left: 30px;
+                    background-color: #fff;
+                    .rezults__slider-text-before,.rezults__slider-text-after{
+                        padding: 25px 12.5px 25px 0;
+                        font-family: Lato;
+                        font-size: 40px;
+                        font-weight: bold;
+                        letter-spacing: 0.4px;
+                        text-align: left;
+                        color: $charcoal-grey;
+
+                        span{
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+                        p{
+                            font-size: 16px;
+                            font-weight: 300;
+                            color: $water-blue;
+                        }
+                    }
+                    .rezults__slider-text-name{
+                        @include Text-Style-12;
+                        line-height: 1;
+                        padding-left: 21px;
+                        border-left: 5px solid $water-blue;
+                        line-height: 0.6;
+                        p{
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height:0.1;
+                        }
+                    }
+                }
+            }
+            }
+        }
+    
 

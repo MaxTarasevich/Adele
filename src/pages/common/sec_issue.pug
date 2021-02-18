@@ -7,5 +7,6 @@ section.issue
          form.issue__form(action="##")
             input.issue__name(type="text", name="name", placeholder="Name") 
             input.issue__email(type="email", name="email",placeholder="Email")
-            textarea.issue__subject(name="subject", cols="30", rows="10",placeholder="Subject")
+            label.issue__subject(for="subject-textarea")  Subject
+            textarea.issue__textarea(name="subject",id="subject-textarea", cols="1", rows="1")
             button.issue__submit(type="submit") SEND
