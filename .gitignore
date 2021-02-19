@@ -9,8 +9,9 @@ Thumbs.db
 
 # Вспомогательные файлы
 *.log*
+build/
 node_modules/
 reports/
-build/
+
 # Папка с собранными файлами проекта
  

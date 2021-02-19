@@ -4,8 +4,6 @@
     background-color: $white;
     padding: 120px 0 120px;
     .rezults__container{
-
-
         .rezults__title{
             max-width: 420px;
             margin: 0 auto 78px;
@@ -34,8 +32,9 @@
                 min-width:900px;
                 display: flex;
                 position: relative;
-                left:-900px;
                 justify-content:end;
+                right: 0;
+                transition: right 0.8s ease-in;
 
                 .slider__img-before{
                     
@@ -89,6 +88,24 @@
                         }
                     }
                 }
+            }
+            .rezults__slider-points{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+            }
+            .rezults__slider-point{
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background-color: $light-blue-grey;
+                margin: 13px;
+                
+            }
+            .rezults__slider-point.active{
+                background-color: $water-blue;
+                transition: background-color 0.8s ease-in-out ;
             }
             }
         }
