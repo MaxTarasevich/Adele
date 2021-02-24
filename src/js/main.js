@@ -1,3 +1,37 @@
+// burger
+const burger = document.querySelector(`.header__nav`)
+const menu = document.querySelector(`.header__menu`)
+const header = document.querySelector(`.header`)
+
+window.addEventListener(`scroll`, () => {
+    header.style.opacity = `0.85`
+})
+
+burger.addEventListener(`click`, toggleMenu)
+menu.addEventListener(`click`, toggleMenu)
+
+function toggleMenu() {
+    burger.classList.toggle(`change`)
+    if (menu.style.display === `block`) {
+        setTimeout(() => {
+            menu.style.display = `none`
+        }, 1000)
+        menu.classList.toggle(`animate_menu`)
+        document.body.style.overflow = `auto`
+        document.body.style.paddingRight = `0px`
+        // menu.style.paddingRight = `0px`
+    } else {
+        menu.style.display = `block`
+        setTimeout(() => {
+            menu.classList.toggle(`animate_menu`)
+        }, 50)
+        document.body.style.overflow = `hidden`
+        // menu.style.paddingRight = `15px`
+        document.body.style.paddingRight = `17px`
+    }
+}
+
+
 //  real-man slider
 
 const prevBtn = document.querySelector(`.rezults__slider-prevArrow`)
@@ -92,7 +126,7 @@ function createPoints(htmlCollection, className, container) {
 const testimonialsItem = document.querySelectorAll(`.testimonials__slider-item`)
 
 let testimonPosition = 0
-let testimonPointNumber = 0
+const testimonPointNumber = 0
 
 const testimonWidth = testimonialsItem[0].clientWidth
 const testimonTotalWidth = testimonWidth * (testimonialsItem.length - 1)
@@ -116,25 +150,52 @@ function testimonNext() {
     }
 }
 
-let timer = setInterval(() => {
+function timerBody() {
     testimonNext()
     pointsColor(testimonPointNumber, testimonPosition, testimonWidth, testimonPoints)
-}, 5000)
+}
+
+let timerId = setInterval(timerBody, 5000)
 
 
 for (let i = 0; i < testimonialsItem.length; i++) {
-    testimonialsItem[i].addEventListener(`mouseenter`, () => {
-        clearInterval(timer)
+    testimonialsItem[i].addEventListener(`pointerenter`, () => {
+        clearInterval(timerId)
     })
     testimonialsItem[i].addEventListener(`pointerleave`, () => {
-        testimonNext()
-        pointsColor(testimonPointNumber, testimonPosition, testimonWidth, testimonPoints)
-        timer = setInterval(() => {
-            testimonNext()
-            pointsColor(testimonPointNumber, testimonPosition, testimonWidth, testimonPoints)
-        }, 5000)
+        timerBody()
+        timerId = setInterval(timerBody, 5000)
     })
-
 }
 
-timer()
+// List tabs for facts block
+
+const listItem = document.querySelectorAll(`.facts__list-item`)
+const descriptionsFacts = document.querySelectorAll(`.facts__description`)
+const startPosition = 1
+
+listItem[startPosition].classList.add(`activ__item`)
+descriptionsFacts[startPosition].classList.add(`activ__description`)
+descriptionsFacts[startPosition].classList.add(`activ__description-animation`)
+
+
+for (let i = 0; i < listItem.length; i++) {
+    listItem[i].addEventListener(`click`, () => {
+        for (let j = 0; j < listItem.length; j++) {
+            if (listItem[j].classList.contains(`activ__item`)) {
+                listItem[j].classList.remove(`activ__item`)
+            }
+            if (descriptionsFacts[j].classList.contains(`activ__description`)) {
+                descriptionsFacts[j].classList.remove(`activ__description`)
+            }
+            if (descriptionsFacts[j].classList.contains(`activ__description-animation`)) {
+                descriptionsFacts[j].classList.remove(`activ__description-animation`)
+            }
+        }
+        listItem[i].classList.add(`activ__item`)
+        descriptionsFacts[i].classList.add(`activ__description`)
+        setTimeout(() => {
+            descriptionsFacts[i].classList.add(`activ__description-animation`)
+        }, 50)
+    })
+}

@@ -9,10 +9,10 @@
         .facts__content{
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-around;
             margin-top: 75px;
         .facts__list{
-            
+            margin-top: 0;
             max-width: 460px;
             list-style: none;
             padding: 0;
@@ -22,18 +22,10 @@
             li{
                 @include Text-Style-17;
                 border-bottom: 1px solid $white-four;
-                padding: 5px;
+                padding: 8px;
                 span{
                   float: right;
                 }
-            }
-            li:hover{
-                transition: 0.4s ease-in;
-                transform: scaleY(1.2);
-                transform: scaleX(1.02);
-                box-shadow: 0px 3px 9px 0 rgba(0, 0, 0, 0.24);
-                 border: solid 1px #d7d7d7;
-                background-color: $white;
             }
             li:first-of-type{
                 font-family: Lato;
@@ -55,23 +47,47 @@
                  
                 }
             }
-            li:first-of-type:hover{
-                transition: 0.4s ease-in;
-                transform: scale(1);
-                box-shadow:none;
-                 border:none;
-                 border-bottom: 5px solid $charcoal-grey;
-                background-color: $white;
+            .activ__item{
+                transition: 0.5s ease-in;
+                transform: scale(1.15);
+                box-shadow: 0px 3px 9px 0 rgba(0, 0, 0, 0.24);
+                font-weight: 600;
+              
+            }
+           
+            .facts__list-button{
+                margin-top: 50px;
+                border-radius: 30px;
+                color: $white-two;
+                background-color: $water-blue;
+                a{
+                    padding: 17px 40px;
+                    display: block;
+                    text-decoration: none;
+                    color: inherit;
+                    text-transform: uppercase;
+                    @include Text-Style-6;
+                    span{
+                        font-weight: 300;
+                    }
+                }
+            }
+            .facts__list-button:hover{
+                transition: 0.5s ease-in;
+                transform: scale(1.1);
             }
             
         }
 
         .facts__description{
-            margin-left: 120px;
+           display: none;
+           opacity: 0.5;
             max-width: 360px;
             .facts__description-image{
                 width: 100px;
                 height: 115px;
+                object-fit: cover;
+                object-position: 50% 50%;
                clip-path:  polygon(50% 0%, 50% 0%, 100% 25%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 
             }
@@ -106,6 +122,14 @@
                 text-align: left;
                 color: $charcoal-grey;
             }
+        }
+        .facts__description.activ__description{
+            display: block;
+           opacity: 0;
+        }
+        .facts__description.activ__description.activ__description-animation{
+            opacity: 1;
+            transition: opacity 1.5s ease-in;
         }
     }
     }
