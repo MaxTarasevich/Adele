@@ -2,6 +2,7 @@
 const burger = document.querySelector(`.header__nav`)
 const menu = document.querySelector(`.header__menu`)
 const header = document.querySelector(`.header`)
+const headerLinks = document.querySelectorAll(`.header__menu-list-link`)
 
 window.addEventListener(`scroll`, () => {
     header.style.opacity = `0.85`
@@ -9,6 +10,27 @@ window.addEventListener(`scroll`, () => {
 
 burger.addEventListener(`click`, toggleMenu)
 menu.addEventListener(`click`, toggleMenu)
+
+function scrollToLink() {
+    for (let i = 0; i < headerLinks.length; i++) {
+        headerLinks[i].addEventListener(`click`, (e) => {
+            e.preventDefault()
+            const href = e.target.getAttribute(`href`).substring(1)
+
+            const scrollTarget = document.getElementById(href)
+
+            const topOffset = header.offsetHeight
+            const elementPosition = scrollTarget.getBoundingClientRect().top
+            const offsetPosition = elementPosition - topOffset
+
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: `smooth`
+            })
+
+        })
+    }
+}
 
 function toggleMenu() {
     burger.classList.toggle(`change`)
@@ -25,6 +47,9 @@ function toggleMenu() {
         setTimeout(() => {
             menu.classList.toggle(`animate_menu`)
         }, 50)
+
+        scrollToLink()
+
         document.body.style.overflow = `hidden`
         // menu.style.paddingRight = `15px`
         document.body.style.paddingRight = `17px`

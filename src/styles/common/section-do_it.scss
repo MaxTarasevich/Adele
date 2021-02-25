@@ -11,22 +11,30 @@ padding-bottom: 172px;
 
 .orderNow__text{
    max-width: 450px;
-    margin-top: 113px;
+    margin-top: 80px;
    
     .orderNow__text-title{
         border-left: 5px solid $water-blue;
         padding-left: 30px;
+        margin-bottom: 70px;
     }
     h1{
         @include Text-Style-2;
+        margin-bottom: 0;
         text-transform: uppercase;
-        margin-bottom: 24px;
+        line-height: 0.5
     }
     h2{
         @include Text-Style-3;
     }
     p{
         @include Text-Style-4;
+    }
+    .orderNow__text-text {
+        margin-bottom: 50px;
+        p{
+            margin: 0;
+        }
     }
     .orderNow__text-button-group{
         button{
