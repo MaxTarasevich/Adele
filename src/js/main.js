@@ -1,11 +1,19 @@
-// burger
+// burger + header scroll
 const burger = document.querySelector(`.header__nav`)
 const menu = document.querySelector(`.header__menu`)
 const header = document.querySelector(`.header`)
 const headerLinks = document.querySelectorAll(`.header__menu-list-link`)
+const headerLogo = document.querySelector(`.header__logo`)
 
 window.addEventListener(`scroll`, () => {
     header.style.opacity = `0.85`
+})
+
+headerLogo.addEventListener(`click`, () => {
+    window.scrollTo({
+        top: 0,
+        behavior: `smooth`
+    })
 })
 
 burger.addEventListener(`click`, toggleMenu)
@@ -56,7 +64,6 @@ function toggleMenu() {
     }
 }
 
-
 //  real-man slider
 
 const prevBtn = document.querySelector(`.rezults__slider-prevArrow`)
@@ -89,7 +96,6 @@ nextBtn.addEventListener(`click`, () => {
     pointsColor(pointNumber, position, width, points)
     animatedItem()
 })
-
 
 function next() {
     if (position + width > totalWidth) {
@@ -137,7 +143,6 @@ function animatedItem() {
     }
 }
 
-
 function createPoints(htmlCollection, className, container) {
     for (let i = 0; i < htmlCollection.length; i++) {
         const div = document.createElement(`div`)
@@ -159,10 +164,8 @@ const testimonPointContainer = document.querySelector(`.testimonials__slider-poi
 
 createPoints(testimonialsItem, `testimonials__slider-point`, testimonPointContainer)
 
-
 const testimonPoints = document.querySelectorAll(`.testimonials__slider-point`)
 testimonPoints[testimonPointNumber].classList.add(`active`)
-
 
 function testimonNext() {
     if (testimonPosition + testimonWidth > testimonTotalWidth) {
@@ -181,7 +184,6 @@ function timerBody() {
 }
 
 let timerId = setInterval(timerBody, 5000)
-
 
 for (let i = 0; i < testimonialsItem.length; i++) {
     testimonialsItem[i].addEventListener(`pointerenter`, () => {
@@ -202,7 +204,6 @@ const startPosition = 1
 listItem[startPosition].classList.add(`activ__item`)
 descriptionsFacts[startPosition].classList.add(`activ__description`)
 descriptionsFacts[startPosition].classList.add(`activ__description-animation`)
-
 
 for (let i = 0; i < listItem.length; i++) {
     listItem[i].addEventListener(`click`, () => {

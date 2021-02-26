@@ -4,20 +4,33 @@
     src: local(HelveticaNeueLTStd-Hv),
       url(../../fonts/Helvetica/HelveticaNeueLTStd-Hv.woff2) format("woff2"),
       url(../../fonts/Helvetica/HelveticaNeueLTStd-Hv.woff) format("woff"),
-      url(../../fonts/Helvetica/HelveticaNeueLTStd-Hv.ttf) format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
   }
   @font-face {
     font-family: Lato;
     src: local(Lato-Regular),
       url(../../fonts/Lato/Lato-Regular.woff2) format("woff2"),
       url(../../fonts/Lato/Lato-Regular.woff) format("woff"),
-      url(../../fonts/Lato/Lato-Regular.ttf) format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
+  }
+
+  @font-face {
+    font-family: Lato-Italic;
+    src: local(Lato-Italic),
+      url(../../fonts/Lato/Lato-Italic.woff2) format("woff2"),
+      url(../../fonts/Lato/Lato-Italic.woff) format("woff"),
+  }
+
+  @font-face {
+    font-family: Lato-Bold;
+    src: local(Lato-Bold),
+      url(../../fonts/Lato/Lato-Bold.woff2) format("woff2"),
+      url(../../fonts/Lato/Lato-Bold.woff) format("woff"),
+  }
+
+  @font-face {
+    font-family: Lato-Black;
+    src: local(Lato-Black),
+      url(../../fonts/Lato/Lato-Black.woff2) format("woff2"),
+      url(../../fonts/Lato/Lato-Black.woff) format("woff"),
   }
  
   @font-face {
@@ -25,15 +38,25 @@
     src: local(Raleway-Regular),
       url(../../fonts/Raleway/Raleway-Regular.woff2) format("woff2"),
       url(../../fonts/Raleway/Raleway-Regular.woff) format("woff"),
-      url(../../fonts/Raleway/Raleway-Regular.ttf) format("truetype");
-    font-weight:normal;
-    font-style: normal;
-    font-stretch: normal;
+  }
+
+  @font-face {
+    font-family: Raleway-Black;
+    src: local(Raleway-Black),
+      url(../../fonts/Raleway/Raleway-Black.woff2) format("woff2"),
+      url(../../fonts/Raleway/Raleway-Black.woff) format("woff"),
+  }
+
+  @font-face {
+    font-family: Raleway-Bold;
+    src: local(Raleway-Bold),
+      url(../../fonts/Raleway/Raleway-Bold.woff2) format("woff2"),
+      url(../../fonts/Raleway/Raleway-Bold.woff) format("woff"),
   }
  
   @mixin Text-Style-8 {
-    font-family: Lato;
-    font-size: 72px;
+    font-family:  Lato-Black;
+    font-size: 4.5rem;
     font-weight: 900;
     line-height: 0.33;
     letter-spacing: 1.8px;
@@ -41,16 +64,16 @@
     color: $white;
   }
   @mixin Text-Style-2 {
-    font-family: Raleway;
-    font-size: 72px;
+    font-family: Raleway-Black;
+    font-size: 4.5rem;
     font-weight: 900;
     //line-height: 0.49;
     text-align: left;
     color: $charcoal-grey;
   }
   @mixin Text-Style-7 {
-    font-family: Raleway;
-    font-size: 30px;
+    font-family: Raleway-Bold;
+    font-size: 1.88rem;
     font-weight: 800;
     line-height: 0.73;
     letter-spacing: 0.75px;
@@ -58,8 +81,8 @@
     color: $charcoal-grey;
   }
   @mixin Text-Style-13 {
-    font-family: Raleway;
-    font-size: 30px;
+    font-family: Raleway-Bold;
+    font-size: 1.88rem;
     font-weight: 800;
     line-height: 0.73;
     letter-spacing: 0.75px;
@@ -68,15 +91,15 @@
   }
   @mixin Text-Style-18 {
     font-family: Raleway;
-    font-size: 30px;
+    font-size: 1.88rem;
     font-weight: bold;
     line-height: 1.17;
     text-align: left;
     color: $charcoal-grey;
   }
   @mixin Text-Style-3 {
-    font-family: Raleway;
-    font-size: 24px;
+    font-family: Raleway-Bold;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.6px;
@@ -85,7 +108,7 @@
   }
   @mixin Text-Style-11 {
     font-family: Raleway;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.2;
     letter-spacing: 0.5px;
@@ -93,7 +116,7 @@
   }
   @mixin Text-Style-19 {
     font-family: Lato;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0.5px;
@@ -101,8 +124,8 @@
     color: $charcoal-grey;
   }
   @mixin Text-Style-9 {
-    font-family: Lato;
-    font-size: 16px;
+    font-family: Lato-Bold;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.38;
     letter-spacing: 0.4px;
@@ -110,8 +133,8 @@
     color: $water-blue;
   }
   @mixin Text-Style-6 {
-    font-family: Lato;
-    font-size: 16px;
+    font-family: Lato-Bold;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -119,8 +142,8 @@
     color: $white-two;
   }
   @mixin Text-Style-5 {
-    font-family: Lato;
-    font-size: 16px;
+    font-family: Lato-Bold;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.88;
     letter-spacing: 0.4px;
@@ -128,8 +151,8 @@
     color: $charcoal-grey;
   }
   @mixin Text-Style-20 {
-    font-family: Lato;
-    font-size: 16px;
+    font-family: Lato-Bold;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -138,7 +161,7 @@
   }
   @mixin Text-Style-16 {
     font-family: Raleway;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -147,14 +170,14 @@
   }
   @mixin Text-Style-12 {
     font-family: Raleway;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     text-align: left;
     color: $charcoal-grey;
   }
   @mixin Text-Style-4 {
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -163,7 +186,7 @@
   }
   @mixin Text-Style-22 {
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.38;
     letter-spacing: 0.4px;
@@ -172,7 +195,7 @@
   }
   @mixin Text-Style-21 {
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -181,7 +204,7 @@
   }
   @mixin Text-Style-17 {
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.25;
     letter-spacing: 0.4px;
@@ -190,7 +213,7 @@
   }
   @mixin Text-Style-14 {
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -199,7 +222,7 @@
   }
   @mixin Text-Style-10 {
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -207,8 +230,8 @@
     color: $steel;
   }
   @mixin Text-Style-15 {
-    font-family: Lato;
-    font-size: 16px;
+    font-family: Lato-Italic;
+    font-size: 1rem;
     font-weight: 300;
     font-style: italic;
     line-height: 1.5;
@@ -218,7 +241,7 @@
   }
   @mixin Text-Style {
     font-family: HelveticaNeueLTStd-Hv;
-    font-size: 15px;
+    font-size: 0.9rem;
     line-height: 3.33;
     text-align: left;
     color: $slate-grey-two;

@@ -4,39 +4,94 @@
  background: url(../../img/dotten_bg.png) no-repeat 0% 52%,$pale-grey; 
 }
 .orderNow__container{
+    position: relative;
 display: flex;
 justify-content: center;
 padding-top: 180px;
 padding-bottom: 172px;
+@include media-tablet-horizontal{
+    padding-top: 50px;
+}
+@include media-tablet{
+    padding-top: 20px;
+}
 
 .orderNow__text{
-   max-width: 450px;
+   width: 45%;
     margin-top: 80px;
+    @include media-tablet-horizontal{
+            margin-top: 0px;
+    }
+    @include media-tablet{
+        margin-top: 80px;
+    }
+    @include media-custom(600px){
+        margin-top: 40px;
+    }
+    @include media-custom(400px){
+        margin-top: 60px;
+    }
    
     .orderNow__text-title{
         border-left: 5px solid $water-blue;
         padding-left: 30px;
         margin-bottom: 70px;
+        @include media-tablet-horizontal{
+            margin-bottom: 30px;
+    }
+       
     }
     h1{
         @include Text-Style-2;
         margin-bottom: 0;
         text-transform: uppercase;
-        line-height: 0.5
+        line-height: 1;
+        @include media-tablet{
+            font-size: 2.5rem;
+        }
+        @include media-custom(400px){
+           font-size: 1.7rem;
+        }
     }
     h2{
+        margin-top: 5px;
         @include Text-Style-3;
+         @include media-tablet{
+            font-size: 1.2rem;
+        }
     }
-    p{
-        @include Text-Style-4;
-    }
+   
     .orderNow__text-text {
         margin-bottom: 50px;
         p{
             margin: 0;
+            @include Text-Style-4;
         }
+        @include media-tablet{
+            margin-bottom: 20px;
+    }
+    @include media-custom(400px){
+      position: absolute;
+      width: 100%;
+      bottom: 17%;
+      left:0;
+      padding: 0.45em;
+    }
     }
     .orderNow__text-button-group{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @include media-tablet{
+          position: absolute;
+          bottom: 17%;
+          left: 0;
+          width: 100%;
+    }
+    @include media-custom(400px){
+        bottom: 7%;
+    }
+       
         button{
             @include Text-Style-6;
             border:none;
@@ -44,6 +99,10 @@ padding-bottom: 172px;
             padding: 20px 38px;
             border-radius: 35px;
             cursor: pointer;
+            @include media-custom(430px){
+                padding: 5px 18px;
+            border-radius: 15px;
+            }
         }
         button+button{
             @include Text-Style-5;
@@ -60,6 +119,15 @@ padding-bottom: 172px;
           left: 9px;
            
         }
+    }
+}
+.orderNow__image{
+    width: 55%;
+    @include media-tablet{
+          padding-top:40px;
+    }
+    img{
+        max-width: 100%;
     }
 }
 }

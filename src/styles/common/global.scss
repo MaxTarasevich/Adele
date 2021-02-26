@@ -37,6 +37,9 @@ box-shadow: 0px 0px 10px 5px $water-blue;
 .container{
     max-width: 1170px;
     margin: 0 auto;
+    @include media-tablet-horizontal{
+        padding: 0 20px;
+    }
 }
 header, section, footer {
     max-width: 1500px;
