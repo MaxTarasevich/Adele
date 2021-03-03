@@ -51,6 +51,9 @@ header, section, footer {
          justify-content: center;
          align-items: center;
          margin-bottom: 73px;
+         @include media-tablet{
+             margin-bottom: 20px;
+         }
             h2{
                 margin: 0;
                 padding: 0;
@@ -58,10 +61,16 @@ header, section, footer {
                 border-right: 1px solid $water-blue;
                 padding-right: 10px;
                 text-transform: uppercase;
+                @include media-tablet{
+                   font-size: 1.5rem;
+                }
             }
             p{
                 margin-top: 16px;
                 @include Text-Style-10;
+                @include media-tablet{
+                    font-size: 1rem;
+                 }
                 
             }
             h2+p{
@@ -69,9 +78,11 @@ header, section, footer {
                 padding: 0;
                 padding-left: 10px;
                 font-family: Raleway;
-                font-size: 30px;
-                font-weight: 300;
+                font-size: 1.88rem;
                 color: $charcoal-grey;
                 text-transform: uppercase;
+                @include media-tablet{
+                    font-size: 1.5rem;
+                 }
             }
 }

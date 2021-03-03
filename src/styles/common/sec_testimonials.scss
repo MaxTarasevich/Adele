@@ -12,6 +12,8 @@
             margin: 0 auto;
             h2{
                 font-weight: 800;
+                padding-top:10px;
+                padding-bottom:10px;
                 color: $white-three;
             }
             p{
@@ -25,15 +27,22 @@
         }
         .testimonials__slider {
             @include Text-Style-15;
-            max-width: 750px;
+            width: 64%;
             margin: 0 auto;
             display: flex;
             overflow: hidden;
+            @include media-tablet-horizontal{
+                width: 80%;
+            }
+            @include media-custom(500px){
+                width: 100%;
+            }
             .testimonials__slider-item{
+                min-width: 100%;
+                padding: 30px;
                 position: relative;
                 right: 0;
                 transition: right 1s ease-in-out;
-                min-width: 735px;
                 padding-bottom: 40px;
                 display: flex;
                 flex-wrap: wrap;
@@ -44,6 +53,9 @@
                 padding: 10px;
                 margin-bottom: 20px;
                 text-align: center;
+                @include media-custom(400px){
+                    font-size: 0.8rem;
+                }
                 }
                 .testimonials__slider-name{
                     margin-left: 30px;
@@ -51,7 +63,7 @@
                    
                 p:first-of-type{
                     font-family: Raleway;
-                    font-size: 16px;
+                    font-size: 1rem;
                      font-weight: bold;
                          letter-spacing: 0.4px;
                         color: $white-three;
@@ -85,6 +97,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include media-custom(800px){
+                margin-top: 0px;
+            }
             .testimonials__slider-point{
                 width: 13px;
                 height: 13px;

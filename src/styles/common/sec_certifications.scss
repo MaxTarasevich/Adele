@@ -13,6 +13,7 @@
     }
     .certifications__content{
         max-width: 950px;
+        padding: 20px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -24,5 +25,8 @@
         max-width: 190px;
         background-color: $pale-grey-two;
         padding: 20px ;
+        img{
+            max-width: 100%;
+        }
     }
 }

@@ -73,6 +73,8 @@ const pointsContainer = document.querySelector(`.rezults__slider-points`)
 const itemsImageBefore = document.querySelectorAll(`.slider__img-before`)
 const itemsTextAfter = document.querySelectorAll(`.rezults__slider-text-after`)
 
+const itemsImageAfter = document.querySelectorAll(`.slider__img-after`)
+
 let position = 0
 const width = items[0].clientWidth
 const totalWidth = width * (items.length - 1)
@@ -84,6 +86,7 @@ const points = document.querySelectorAll(`.rezults__slider-point`)
 points[pointNumber].classList.add(`active`)
 itemsImageBefore[pointNumber].classList.add(`activ__item`)
 itemsTextAfter[pointNumber].classList.add(`activ__item-text`)
+itemsImageAfter[pointNumber].classList.add(`activ__item`)
 
 prevBtn.addEventListener(`click`, () => {
     prev()
@@ -136,9 +139,11 @@ function animatedItem() {
         if (i === pointNumber) {
             itemsImageBefore[i].classList.add(`activ__item`)
             itemsTextAfter[i].classList.add(`activ__item-text`)
+            itemsImageAfter[i].classList.add(`activ__item`)
         } else {
             itemsImageBefore[i].classList.remove(`activ__item`)
             itemsTextAfter[i].classList.remove(`activ__item-text`)
+            itemsImageAfter[i].classList.remove(`activ__item`)
         }
     }
 }

@@ -5,63 +5,87 @@
      justify-content: space-around;
      grid-template-columns:minmax(auto,255px) minmax(auto,340px) minmax(auto,255px);
      padding-top: 110px;
+     @include media-custom(750px){
+         padding-top: 50px;
+         grid-template-columns: minmax(auto,255px) minmax(auto,300px);
+     }
+     @include media-custom(500px){
+        grid-template-columns: minmax(auto,400px);
+     }
        
         .fetures__title {
             grid-column-start: 2;
-        /* display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-         align-items: center;
-         margin-bottom: 73px;
-            h2{
-                margin: 0;
-                padding: 0;
-                @include Text-Style-7;
-                border-right: 1px solid $water-blue;
-                padding-right: 10px;
-                text-transform: uppercase;
-            }
-            p{
-                margin-top: 16px;
-                @include Text-Style-10;
-                
-            }
-            h2+p{
-                margin: 0;
-                padding: 0;
-                padding-left: 10px;
-                font-family: Raleway;
-                font-size: 30px;
-                font-weight: 300;
-                color: $charcoal-grey;
-                text-transform: uppercase;
-            }*/
-           
+           @include media-custom(880px){
+               grid-column-start: 1;
+            grid-column-end: 4;
+            width: 70%;
+            margin: 0 auto;
+           }
         }
 
         .fetures__img{
             grid-column-start: 2;
+            margin: 0 20px;
+            img{
+                max-width: 100%;
+            }
+            @include media-custom(750px){
+                grid-column-start: 2;
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+            @include media-custom(500px){
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+            }
         }
 
         .fetures__list-container-left{
             grid-column-start: 1;
+            @include media-custom(750px){
+                grid-row-start: 2;
+            }
+            @include media-custom(500px){
+                grid-column-end: 3;
+                grid-row-start: 2;
+            }
             .fetures__contant-list{
                 text-align: right;
                 li:first-of-type{
                    border-right: 5px solid $water-blue;
                    padding-right: 15px;
                    margin-top: 63px;
+                   @include media-custom(750px){
+                    margin-top: 15px;
+                }
                     }
             }
         }
         .fetures__list-container-right{
             grid-column-start: 3;
+            @include media-custom(750px){
+                grid-column-start: 1;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+            @include media-custom(500px){
+                grid-row-start: 4;
+                grid-column-end: 3;
+            }
             .fetures__contant-list{
                 text-align:left;
                 li:first-of-type{
                     border-left: 5px solid $water-blue;
                     padding-left: 15px;
                     margin-top: 63px;
+                    @include media-custom(750px){
+                        margin-top: 15px;
+                    }
                      }
             }
         }
@@ -69,19 +93,30 @@
             list-style: none;
             padding: 0;
             margin-bottom: 80px;
+            @include media-custom(750px){
+                margin-bottom: 15px;
+            }
 
             li:first-of-type{
             @include Text-Style-11;
             text-transform: uppercase;
             margin-bottom: 15px;
             padding-bottom: 15px;
-
+            @include media-tablet{
+                font-size: 1rem;
+                margin-bottom: 0.5em;
+                padding-bottom: 0.5em;
+            }
             }
 
             li:last-of-type{
                 font-family: Lato;
-                font-size: 16px;
+                font-size: 1rem;
                 color: $slate-grey;
+                @include media-tablet{
+                    font-size: 0.8rem;
+                   
+                }
             }
         }
        
