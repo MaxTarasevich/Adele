@@ -7,17 +7,24 @@
     @include media-tablet-horizontal{
         padding-top: 60px;
     }
+    @include media-custom(600px){
+        background-size: 100%;
+        background-position:0% 30%;
+    }
     .supplement__container{
         display: flex;
+        flex-wrap: wrap;
       justify-content: space-between;
         .supplement__image{
            width: 64%;
            @include media-custom(900px){
                width: 50%;
            }
+           @include media-custom(600px){
+               width: 100%;
+           }
            img{
                max-width: 100%;
-               object-fit: cover;
            }
         }
         .supplement__content{
@@ -26,6 +33,11 @@
             @include media-custom(900px){
                 width:40%;
                 align-items: flex-start;
+            }
+            @include media-custom(600px){
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
             }
             .supplement__content-title{
                 padding-top: 15%;
@@ -69,6 +81,12 @@
                    font-size: 1rem;
                    padding: 10px 20px;
                 }
+            }
+            .supplement__content-button{
+                transition: 0.8s ease-in;
+            }
+            .supplement__content-button:hover{
+                transform: scale(1.1);
             }
         }
     }

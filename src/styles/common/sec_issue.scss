@@ -31,8 +31,14 @@
         input{
             width: 260px;
             border-bottom: 1px solid $white-four;
+            
+            margin-bottom: 30px;
+        }
+        input:first-of-type{
+            margin-right: 30px;
         }
         .issue__subject{
+            width: 100%;
             padding: 12px 6px;
             margin-top: 40px;
             @include Text-Style-21;

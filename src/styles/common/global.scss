@@ -56,9 +56,9 @@ header, section, footer {
          }
             h2{
                 margin: 0;
-                padding: 0;
+                padding:10px;
                 @include Text-Style-7;
-                border-right: 1px solid $water-blue;
+                border-right: 2px solid $water-blue;
                 padding-right: 10px;
                 text-transform: uppercase;
                 @include media-tablet{

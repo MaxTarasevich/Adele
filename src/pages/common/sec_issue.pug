@@ -5,8 +5,8 @@ section.issue#issue
             p  Your Issue
             p We’re always happy to reply our customers.
          form.issue__form(action="##")
-            input.issue__name(type="text", name="name", placeholder="Name") 
-            input.issue__email(type="email", name="email",placeholder="Email")
+            input.issue__name(type="text", name="name", placeholder="Name" required) 
+            input.issue__email(type="email", name="email",placeholder="Email" required)
             label.issue__subject(for="subject-textarea")  Subject
-            textarea.issue__textarea(name="subject",id="subject-textarea", cols="1", rows="1")
+            textarea.issue__textarea(name="subject",id="subject-textarea", cols="1", rows="1" required)
             button.issue__submit(type="submit") SEND
