@@ -14,6 +14,15 @@ headerLogo.addEventListener(`click`, () => {
         top: 0,
         behavior: `smooth`
     })
+    if (menu.style.display === `block`) {
+        setTimeout(() => {
+            menu.style.display = `none`
+        }, 1000)
+        menu.classList.toggle(`animate_menu`)
+        document.body.style.overflow = `auto`
+        document.body.style.paddingRight = `0px`
+        burger.classList.toggle(`change`)
+    }
 })
 
 burger.addEventListener(`click`, toggleMenu)
