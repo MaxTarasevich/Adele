@@ -2,7 +2,7 @@
     background-color: $pale-grey;
     padding: 110px 0;
     @include media-tablet{
-        padding: 60px;
+        padding: 60px 0;
     }
     .facts__container{
         .facts__title{

@@ -9,8 +9,8 @@ display: flex;
 justify-content: center;
 padding-top: 180px;
 padding-bottom: 172px;
-@include media-tablet-horizontal{
-    padding-top: 50px;
+@include media-custom(1280px){
+    padding-top: 55px;
 }
 @include media-tablet{
     padding-top: 20px;

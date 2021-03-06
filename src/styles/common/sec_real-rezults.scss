@@ -19,23 +19,33 @@
             .rezults__slider-prevArrow, .rezults__slider-nextArrow{
                 transition: 0.3s ease-in;
                 cursor: pointer;
-                @include media-tablet{
+                @include media-custom(1050px){
                     position: absolute;
                     top: 30%;
                     z-index: 5;
                 }
+                @include media-custom(600px){
+                    width: 40px;
+                }
             }
             .rezults__slider-prevArrow{
-                @include media-tablet{
+                @include media-custom(1050px){
                     left: 0%;
+                }
+                @include media-custom(600px){
+                    transform: rotate(180deg);
+                    width: 40px;
                 }
             }
             .rezults__slider-nextArrow{
-                 @include media-tablet{
+                 @include media-custom(1050px){
                    right: 0%;
                 }
             }
-            .rezults__slider-prevArrow:hover, .rezults__slider-nextArrow:hover{
+            .rezults__slider-prevArrow:hover{
+                transform: rotate(180deg) scale(1.1);
+            }
+            .rezults__slider-nextArrow:hover{
                 transform: scale(1.1);
             }
             
@@ -61,6 +71,7 @@
                 justify-content:flex-end;
                 right: 0;
                 transition: right 0.8s ease-in;
+                overflow: hidden;
                 @include media-custom(1050px){
                     flex-wrap: wrap;
                 }
@@ -74,20 +85,19 @@
                     left: 34.5%;
                     opacity: 1;
                     width: 360px;
-                   
-                    img{
-                        width: 360px;
-                    }
                     @include media-tablet-horizontal{
                         left: 29.5%;
                     }
                     @include media-custom(550px){
                         left: 10%;
                         }
-                        @include media-custom(450px){
+                    @include media-custom(450px){
                             left: 0;
                             }
                    
+                    img{
+                        width: 360px;
+                    }
                 }
 
                 .slider__img-before.activ__item{
@@ -96,6 +106,12 @@
                     transition: all 1s ease-in;
                     transition-delay: 2s;
                     z-index: 2;
+                    @include media-custom(1050px){
+                        left: 20%;
+                    }
+                    @include media-tablet{
+                        left: 8%;
+                    }
                    
                     img{
                         width: 260px;
@@ -112,6 +128,10 @@
                 
                 .slider__img-after{
                     opacity: 0;
+                    margin-right:5%;
+                    @include media-tablet{
+                        margin-right:2%;
+                    }
                     img{
                         width: 360px;
                     }
