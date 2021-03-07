@@ -7,7 +7,7 @@
         display: flex;
         position: relative;
         @include media-custom(450px){
-            padding: 30px 10px;
+            padding: 30px 0px 30px 40px;
         }
     }
     .description__image {

@@ -3,6 +3,9 @@
 .rezults{
     background-color: $white;
     padding: 120px 0 120px;
+    @include media-tablet{
+        padding: 60px 0 60px;
+    }
     .rezults__container{
         .rezults__title{
             max-width: 420px;
@@ -206,7 +209,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 40px;
+                margin-top: 10px;
                 @include media-tablet{
                     margin-top: 0px;
                    }

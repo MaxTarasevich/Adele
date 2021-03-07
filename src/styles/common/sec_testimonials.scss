@@ -4,6 +4,9 @@
     padding: 110px 0;
     position: relative;
     z-index: 1;
+    @include media-tablet{
+        padding: 60px 0;
+    }
     .testimonials__container{
         position: relative;
         z-index: 3;
@@ -11,17 +14,22 @@
             max-width: 400px;
             margin: 0 auto;
             h2{
-                font-weight: 800;
-                padding-top:10px;
-                padding-bottom:10px;
+                font-family: Raleway-Black;
+                padding:10px;
                 color: $white-three;
+                @include media-tablet{
+                    padding: 5px 10px;
+                    line-height: 1.8;
+                }
             }
             p{
                 @include Text-Style-14;
             }
             h2+p{
                 @include Text-Style-13;
-
+                @include media-tablet{
+                    line-height: 1.8;
+                }
             }
           
         }
