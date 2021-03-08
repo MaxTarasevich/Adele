@@ -94,11 +94,14 @@ window.onload = function () {
 
     const width = items[0].clientWidth
     const totalWidth = width * (items.length - 1)
-    const points = document.querySelectorAll(`.rezults__slider-point`)
+
     let pointNumber = 0
     let position = 0
 
     createPoints(items, `rezults__slider-point`, pointsContainer)
+
+    const points = document.querySelectorAll(`.rezults__slider-point`)
+
     points[pointNumber].classList.add(`active`)
     itemsImageBefore[pointNumber].classList.add(`activ__item`)
     itemsTextAfter[pointNumber].classList.add(`activ__item-text`)
