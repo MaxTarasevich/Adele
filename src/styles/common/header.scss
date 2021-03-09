@@ -6,6 +6,7 @@
   z-index: 5;
   background-color: $white;
   padding-top: 27px;
+  transition: 0.8s ease-in;
   @include media-tablet-horizontal{
     padding-top: 10px;
   }
@@ -49,10 +50,10 @@
       cursor: pointer;
       .burger-item-1, .burger-item-2, .burger-item-3 {
         width: 35px;
-  height: 5px;
-  background-color:$brownish-grey;
-  margin: 6px 0;
-  transition: 0.6s;
+        height: 5px;
+        background-color:$brownish-grey;
+        margin: 6px 0;
+        transition: 0.6s;
   @include media-tablet-horizontal{
     width: 30px;
     height: 4px;
@@ -139,4 +140,17 @@
   .header__menu.animate_menu{
     top:0;
   }
+}
+
+.header.scrolling{
+  padding-top: 10px;
+  .header__container{
+    padding-bottom: 10px;
+  }
+  .header__logo{
+    img{
+      max-width: 40%;
+    }
+  }
+
 }

@@ -31,9 +31,12 @@ button:hover{
     transition: 0.4s ease-in;
     transform: scale(1.1);
 }
-
+input{
+    border: none;
+}
 input:focus,textarea:focus{
 box-shadow: 0px 0px 10px 5px $water-blue;
+
 }
 .container{
     max-width: 1170px;

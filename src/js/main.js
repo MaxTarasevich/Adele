@@ -14,13 +14,13 @@ window.onload = function () {
     const headerLinks = document.querySelectorAll(`.header__menu-list-link`)
     const headerLogo = document.querySelector(`.header__logo`)
 
-    // padding body when scroll off
-    const paddingScroll = window.innerWidth - document.body.clientWidth
-
-
     window.addEventListener(`scroll`, () => {
         header.style.opacity = `0.85`
+        header.classList.add(`scrolling`)
     })
+
+    // padding body when scroll off
+    const paddingScroll = window.innerWidth - document.body.clientWidth
 
     headerLogo.addEventListener(`click`, () => {
         window.scrollTo({

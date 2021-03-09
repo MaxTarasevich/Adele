@@ -1,17 +1,14 @@
 
 
 .orderNow{
- background: url(../../img/dotten_bg.png) no-repeat 0% 52%,$pale-grey; 
+ background: url(../img/dotten_bg.png) no-repeat 0% 52%,$pale-grey; 
 }
 .orderNow__container{
     position: relative;
 display: flex;
 justify-content: center;
-padding-top: 180px;
+padding-top: 55px;
 padding-bottom: 172px;
-@include media-custom(1280px){
-    padding-top: 55px;
-}
 @include media-tablet{
     padding-top: 20px;
 }
@@ -115,7 +112,7 @@ padding-bottom: 172px;
             text-transform: uppercase;
         }
         button+button::after{
-            content: url(../../img/video_icon.png);
+            content: url(../img/video_icon.png);
             width: 18px;
             height: 18px;
           position: relative;
