@@ -193,12 +193,10 @@
                     }
                     .rezults__slider-text-name{
                         @include Text-Style-12;
-                        line-height: 1;
+                        font-weight: 800;
                         padding-left: 21px;
                         border-left: 5px solid $water-blue;
-                        line-height: 0.6;
                         p{
-                            font-size: 1rem;
                             font-weight: 300;
                             line-height:0.1;
                         }
