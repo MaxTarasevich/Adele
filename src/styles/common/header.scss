@@ -3,7 +3,7 @@
 .header {
   position: sticky;
   top:0;
-  z-index: 5;
+  z-index: 7;
   background-color: $white;
   padding-top: 27px;
   transition: 0.8s ease-in;
@@ -35,7 +35,7 @@
       img{
          max-width: 100%;
           padding-right: 12px;
-          @include media-tablet-horizontal{
+          @include media-tablet{
             max-width: 30%;
           }
       }
@@ -98,26 +98,30 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: 0;
-      margin: 20vh auto 0;
+      margin: 15vh auto 0;
       @include media-custom(450px){
         grid-template-columns: 1fr;
-        margin: 10vh auto 0;
       }
       li{
         grid-column-start: 1;
         cursor: pointer;
         border-radius: 1em;
         transition: 0.8s ease-in;
+        margin-bottom: 20px;
+        @include media-custom(550px){
+          margin-bottom: 10px;
+        }
         a{
           display: block;
-          padding:0em 1.2em;
+          padding:1.2em;
           text-decoration: none;
           @include Text-Style;
           font-size: 1.2rem;
           text-align: center;
           transition: 0.6s ease-in;
-          @include media-custom(550px){
+          @include media-custom(850px){
             font-size: 1rem;
+            padding: 0.5em;
           }
         }
       }
@@ -150,6 +154,9 @@
   .header__logo{
     img{
       max-width: 40%;
+      @include media-tablet{
+        max-width: 28%;
+      }
     }
   }
 
