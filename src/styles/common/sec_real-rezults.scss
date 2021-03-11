@@ -46,7 +46,10 @@
                 }
             }
             .rezults__slider-prevArrow:hover{
-                transform: rotate(180deg) scale(1.1);
+                transform:scale(1.1);
+                @include media-custom(600px){
+                    transform: rotate(180deg) scale(1.1);
+                }
             }
             .rezults__slider-nextArrow:hover{
                 transform: scale(1.1);
