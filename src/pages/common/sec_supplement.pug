@@ -1,7 +1,9 @@
 section.supplement#supplement
     .container.supplement__container
         .supplement__image
-            img(src="img/supplement_img.webp", alt="") 
+            picture 
+                source(srcset="img/supplement_img.webp", type="image/webp")
+                img(src="img/supplement_img.png", alt="supplement", loading="lazy") 
         .supplement__content
             .supplement__content-title 
                 h2 A Supplement

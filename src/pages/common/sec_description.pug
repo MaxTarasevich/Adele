@@ -1,7 +1,9 @@
 section.description
     .container.description__container
-        .description__image 
-            img(src="img/Weight_Loss.webp", alt="weight loss image")
+        .description__image
+            picture
+                source(srcset="img/Weight_Loss.webp", type="image/webp")  
+                img(src="img/Weight_Loss.png", alt="weight loss image", loading="lazy")
         .description__content 
             ul.description__content-item 
                 li 100
